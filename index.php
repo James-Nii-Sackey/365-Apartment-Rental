@@ -1,38 +1,13 @@
+<?php 
+$title = '365 Apartment';
+include 'templates/header.php'; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Untitled</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/swiper-icons.css">
-    <link rel="stylesheet" href="assets/css/Footer-Dark-icons.css">
-    <link rel="stylesheet" href="assets/css/Hero-Clean-images.css">
-    <link rel="stylesheet" href="assets/css/Lightbox-Gallery-baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/Modern-Contact-Form.css">
-    <link rel="stylesheet" href="assets/css/simple-footer.css">
-    <link rel="stylesheet" href="assets/css/Simple-Slider-swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
-<link rel="stylesheet" href="Service.css">
-</head>
 
-<body>
-    <nav class="navbar navbar-light navbar-expand-md sticky-top bg-white">
-        <div class="container-fluid"><a class="navbar-brand" href="#"> <img src="assets/img/fr.png" height="40px" width="40px"> 365</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="About.html">ABOUT</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Service.html">SERVICE</a></li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="Contact.html">CONTACT</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <style>
+
+      <style>
         /* Use flexbox for layout */
         .content-wrapper {
             display: flex;
@@ -77,15 +52,7 @@
             z-index: 1060;
         }
 
-
-.location {
-    font-size: 14px;
-    color: #555;
-    text-align: center;
-    margin-top: 5px;
-}
-
-/* Scrollbar styles for the booking sidebar */
+        /* Scrollbar styles for the booking sidebar */
 #bookingSidebar {
     overflow-y: auto; /* Enable vertical scrolling */
     height: 100%; /* Ensure it takes full height */
@@ -115,6 +82,8 @@
     border-radius: 4px; /* Rounded corners */
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
 }
+   
+
         
     </style>
     <div id="bookingButton">
@@ -206,7 +175,8 @@
 
 </script>
 
-              <label for="firstname">first name</label>
+
+              <label for="Firstname">First name</label>
               <input type="text" class="form-control" id="name" name="First name" placeholder="" required>
             </div>
 
@@ -251,29 +221,6 @@
 
           </div>
 
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script>
-    function toggleBookingSidebar() {
-        const sidebar = document.getElementById('bookingSidebar');
-        const bookingButton = document.getElementById('bookingButton');
-        const bookingForm = document.getElementById('bookingForm');
-        sidebar.classList.toggle('open');
-        if (sidebar.classList.contains('open')) {
-            bookingButton.style.display = 'none';
-        } else {
-            bookingButton.style.display = 'block';
-            bookingForm.reset(); // Clear the form fields
-        }
-    }
-
-    // Prevent form submission for demo purposes
-    document.getElementById('bookingForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        // Simulate booking success
-        alert('Booking Submitted!');
-        toggleBookingSidebar(); // Hide sidebar and reset form
-    });
-</script>
 
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script>
@@ -298,7 +245,8 @@
         toggleBookingSidebar(); // Hide sidebar and reset form
     });
 </script>
- 
+
+   
     <div class="simple-slider">
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -306,66 +254,48 @@
             </div>
         </div>
     </div>
-    <section class="py-4 py-xl-5">
+    <div class="container d-flex flex-column align-items-center py-4 py-xl-5">
         <section class="py-4 py-xl-5">
-            <h1 class="text-center border-1 border-dark"><br><strong><span style="color: rgba(var(--bs-dark-rgb),var(--bs-text-opacity)) ;">! Apartments for rent !</span></strong><br><br></h1><header></header>
-            <section class="text-center py-4 py-xl-5">
+            <div class="container h-100">
+                <div class="text-dark bg-white border rounded border-1 p-4 py-5">
+                    <div class="row h-100">
+                        <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
+                            <div>
+                                <h1 class="text-uppercase fw-bold text-dark mb-3">Welcome to 365 Apartments!</h1>
+                                <p class="mb-4">At 365 Apartments, we pride ourselves on providing comfortable, stylish, and affordable living spaces tailored to your needs. Whether you’re looking for a cozy studio or a spacious family apartment, we have the perfect home waiting for you. Explore our available apartments and let us help you find a place to call your own. Your comfort is our priority!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="py-4 py-xl-5">
                 <div class="container">
-    <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3" data-bss-baguettebox="">
-        <div class="col">
-            <img class="img-fluid" src="assets/img/1.jpg" />
-            <p class="location">Location: Two bedrooms 2 bath Apartment at 365 PLAZA at Mayera</p>
-        </div>
-        <div class="col">
-            <img class="img-fluid" src="assets/img/2.jpg" />
-            <p class="location">Location: One Bedroom Self House at Okaiman-Mayera</p>
-        </div>
-        <div class="col">
-            <img class="img-fluid" src="assets/img/3.jpg" />
-            <p class="location">Location: Two bedrooms Two bath Apartment at 365 Residence-Mayera</p>
-        </div>
-        <div class="col">
-            <img class="img-fluid" src="assets/img/4.jpg" />
-            <p class="location">Location: Two bedrooms One bath Apartment at 365 Residence-Mayera</p>
-        </div>
-        <div class="col">
-            <img class="img-fluid" src="assets/img/6.jpg" />
-            <p class="location">Location: Three bedrooms Three bath Apartment at 365 Residence-Mayer</p>
-        </div>
-        <div class="col">
-            <img class="img-fluid" src="assets/img/5.jpg" />
-            <p class="location">Location: One bedrooms One bath Apartment at 365 PLAZA at Mayera</p>
-        </div>
-    </div>
-</div>
-
+                    <div class="text-white bg-dark border rounded border-0 p-4 p-md-5">
+                        <h2 class="fw-bold text-center text-white mb-3">Affordable Apartment for rent !</h2>
+                    </div>
+                </div>
             </section>
-            <div class="container">
-                <div class="text-white bg-dark border rounded border-0 p-4 p-md-5">
-                    <h2 class="fw-bold text-center text-white mb-3">Services we offer at 365 rent Apartment</h2>
-                    <p class="text-center mb-4">At 365 Apartments, we pride ourselves on providing comfortable, stylish, and affordable living spaces tailored to your needs. Whether you’re looking for a cozy studio or a spacious family apartment, we have the perfect home waiting for you. Explore our available apartments and let us help you find a place to call your own. Your comfort is our priority!<br><br><br></p>
+            <div class="text-dark bg-white border rounded border-1 border-dark p-4 py-5">
+                <div class="row h-100">
+                    <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
+                        <div>
+                            <h1 class="text-uppercase fw-bold text-dark border-1 mb-3">365 apartment</h1>
+                            <p class="mb-4"><br>365 Apartments is a premier apartment rental company dedicated to providing exceptional housing solutions for individuals and families. With a commitment to comfort, convenience, and affordability, we offer a wide range of apartments designed to suit diverse lifestyles and preferences.<br><br></p><a class="btn btn-primary" role="button" href="Service.html" style="background: rgb(255,255,255);color: rgb(0,0,0);">Click&nbsp;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-    </section>
-    <div class="text-white footer-2" style="background: rgb(0,0,0);">
+    </div>
+    <footer class="text-white footer-2" style="background: rgb(0,0,0);">
         <div class="container">
             <div class="row">
                 <div class="col-8 col-sm-6 col-md-6">
                     <p class="text-center text-start" style="margin-top: 5%;margin-bottom: 3%;">Copyright © 2024 365 Apartment.All right reserved</p>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6">
-                    <p class="text-end" style="margin-top: 5%;margin-bottom: 8%%;font-size: 1em;">Privacy Policy</p>
+                    <p class="text-end" style="margin-top: 5%;margin-bottom: 8%;font-size: 1em;">Privacy Policy</p>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
-    <script src="assets/js/Lightbox-Gallery-baguetteBox.min.js"></script>
-    <script src="assets/js/Lightbox-Gallery.js"></script>
-    <script src="assets/js/Simple-Slider-swiper-bundle.min.js"></script>
-    <script src="assets/js/Simple-Slider.js"></script>
-</body>
-
-</html>
+        <?php include 'templates/footer.php'; ?>
