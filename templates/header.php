@@ -21,7 +21,7 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md sticky-top bg-white">
-        <div class="container-fluid"><a class="navbar-brand" href="#"><img src="assets/img/fr.png" height="40px" width="40px">365</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand" href="index.php"><img src="assets/img/fr.png" height="40px" width="40px">365</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.php">HOME</a></li>
@@ -30,6 +30,7 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="Contact.php">CONTACT</a></li>
+                    <li class="nav-item <?php $nav_active; ?> "><a class="nav-link" href="apply.php">APPLY</a></li>
                 </ul>
             </div>
         </div>

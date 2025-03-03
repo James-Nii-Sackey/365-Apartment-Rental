@@ -86,165 +86,19 @@ include 'templates/header.php';
 
         
     </style>
-    <div id="bookingButton">
-    <button class="btn btn-primary" onclick="toggleBookingSidebar()">Rent an Apartment</button>
-</div>
+
+
 <div id="bookingSidebar">
     <span class="close-btn" onclick="toggleBookingSidebar()">&times;</span>
     <h3>Rent Apartment</h3>
  <!-- Form with no action attribute for offline usage -->
- <form method="post" action="https://script.google.com/macros/s/AKfycbxCZvJn674Z-yD7qVhqSKhg3ibRgTCUXPTyniLgERGhNzV--dCCFBCdlXbcfTsvQ_RIjA/exec">            <div class="form-group">
-                <div class="form-group">
-    <label for="rentPackage">Rent Package Duration:</label>
-    <select id="rentPackage" name="Rent Package Duration" required>
-        <option value="3 months for GHC 1200">3 months for GHC 1200</option>
-        <option value="6 months for GHC 2400">6 months for GHC 2400</option>
-        <option value="12 months for GHC 4800">12 months for GHC 4800</option>
-    </select>
-</div>
-
-<br>
-
-<div class="form-group">
-    <div class="location-header">
-        <label for="Location">Location:</label>
-        <button type="button" id="toggleButton" name="location"  class="toggle-btn">X</button>
-    </div>
-    <div id="checkboxList" class="checkbox-list" style="display: none;">
-        <label><input type="radio" name="location" value="Two bedrooms 2 bath Apartment at 365 PLAZA at Mayera"> Two bedrooms 2 bath Apartment at 365 PLAZA at Mayera</label><br>
-        <label><input type="radio" name="location" value="One Bedroom Self House at Okaiman-Mayera"> One Bedroom Self House at Okaiman-Mayera</label><br>
-        <label><input type="radio" name="location" value="Two bedrooms Two bath Apartment at 365 Residence-Mayera"> Two bedrooms Two bath Apartment at 365 Residence-Mayera</label><br>
-        <label><input type="radio" name="location" value="Two bedrooms One bath Apartment at 365 Residence-Mayera"> Two bedrooms One bath Apartment at 365 Residence-Mayera</label><br>
-        <label><input type="radio" name="location" value="Three bedrooms Three bath Apartment at 365 Residence-Mayer"> Three bedrooms Three bath Apartment at 365 Residence-Mayera</label><br>
-        <label><input type="radio" name="location" value="One bedrooms One bath Apartment at 365 PLAZA at Mayera"> One bedrooms One bath Apartment at 365 PLAZA at Mayera</label><br>
-    </div>
-</div>
-
-
-
-
-
-<style type="text/css">
-    .checkbox-list {
-    margin-top: 10px;
-    display: none;
-}
-
-.location-header {
-    display: flex;
-    align-items: center;
-}
-
-.toggle-btn {
-    margin-left: 10px;
-    cursor: pointer;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    padding: 3px 6px;  /* Reduced padding for a smaller button */
-    font-size: 12px;    /* Smaller font size */
-    border-radius: 4px; /* Smaller border radius */
-    display: inline-block;
-}
-
-.toggle-btn:hover {
-    background-color: #ddd;
-}
-
-
-.form-group {
-    position: relative;
-}
-
-.location-header label, .location-header button {
-    position: static; /* Keeps them in the same line and static */
-}
-
-
-</style>
-
-<script type="text/javascript">
-  document.getElementById('toggleButton').addEventListener('click', function() {
-    var list = document.getElementById('checkboxList');
-    if (list.style.display === "none") {
-        list.style.display = "block";
-    } else {
-        list.style.display = "none";
-    }
-});
-
-
-</script>
-
-
-              <label for="Firstname">First name</label>
-              <input type="text" class="form-control" id="name" name="First name" placeholder="" required>
-            </div>
-
-            <div class="form-group">
-              <label for="LastName">Last name</label>
-              <input type="text" class="form-control" id="name" name="Last name" placeholder="" required>
-            </div>
-
-            <!-- Phone -->
-            <div class="form-group">
-              <label for="Mobile number"> Mobile number</label>
-              <input type="text" class="form-control" id="Mobilenumber" name="Mobile number" placeholder="" required>
-            </div>
-
-    <div class="form-group">
-              <label for="Email Address">Email address </label>
-              <input type="text" class="form-control" id="Email Address" name="Email Address" placeholder="" required>
-            </div>
-
-            <div class="form-group">
-              <label for="Name of Emergency person">Name of Emergency person </label>
-              <input type="text" class="form-control" id="Name of Emergency Person" name="Name of Emergency Person" placeholder="" required>
-            </div>
-
-
-              <div class="form-group">
-              <label for="EmergencyContactPhoneNumber"> Emergency Contact Phone Number </label>
-              <input type="text" class="form-control" id="Emergency Contact Phone Number" name="Emergency Contact Phone Number" placeholder="" required>
-            </div>
-            <div class="form-group">
-              <label for="Agreement"> Tenant Initial Deposit Agreement (GHC 500) </label>
-            <input type="number" id="agreement" name="Tenant Initial Deposit (GHC 500)" value="500" readonly>
-
-            </div>
-
-      
-<br>
-          
-            <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary btn-block">Submit </button>
-          </form>
+ 
 
           </div>
 
 
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script>
-    function toggleBookingSidebar() {
-        const sidebar = document.getElementById('bookingSidebar');
-        const bookingButton = document.getElementById('bookingButton');
-        const bookingForm = document.getElementById('bookingForm');
-        sidebar.classList.toggle('open');
-        if (sidebar.classList.contains('open')) {
-            bookingButton.style.display = 'none';
-        } else {
-            bookingButton.style.display = 'block';
-            bookingForm.reset(); // Clear the form fields
-        }
-    }
 
-    // Prevent form submission for demo purposes
-    document.getElementById('bookingForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        // Simulate booking success
-        alert('Booking Submitted!');
-        toggleBookingSidebar(); // Hide sidebar and reset form
-    });
-</script>
 
    
     <div class="simple-slider">
@@ -280,22 +134,12 @@ include 'templates/header.php';
                     <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
                         <div>
                             <h1 class="text-uppercase fw-bold text-dark border-1 mb-3">365 apartment</h1>
-                            <p class="mb-4"><br>365 Apartments is a premier apartment rental company dedicated to providing exceptional housing solutions for individuals and families. With a commitment to comfort, convenience, and affordability, we offer a wide range of apartments designed to suit diverse lifestyles and preferences.<br><br></p><a class="btn btn-primary" role="button" href="Service.html" style="background: rgb(255,255,255);color: rgb(0,0,0);">Click&nbsp;</a>
+                            <p class="mb-4"><br>365 Apartments is a premier apartment rental company dedicated to providing exceptional housing solutions for individuals and families. With a commitment to comfort, convenience, and affordability, we offer a wide range of apartments designed to suit diverse lifestyles and preferences.<br><br></p><a class="btn btn-primary" role="button" href="Service.php" style="background: rgb(255,255,255);color: rgb(0,0,0);">Click&nbsp;</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    <footer class="text-white footer-2" style="background: rgb(0,0,0);">
-        <div class="container">
-            <div class="row">
-                <div class="col-8 col-sm-6 col-md-6">
-                    <p class="text-center text-start" style="margin-top: 5%;margin-bottom: 3%;">Copyright © 2024 365 Apartment.All right reserved</p>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6">
-                    <p class="text-end" style="margin-top: 5%;margin-bottom: 8%;font-size: 1em;">Privacy Policy</p>
-                </div>
-            </div>
-        </div>
+  
         <?php include 'templates/footer.php'; ?>

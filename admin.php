@@ -1,4 +1,5 @@
 <?php 
+session_start();
  $title = 'Admin';
     include('templates/header.php');
     include('config/config.php');
@@ -11,7 +12,7 @@ if(isset($_POST['submit'])){
     if(mysqli_num_rows($result) > 0){
         $_SESSION['ADMIN_LOGIN'] = 'yes';
         $_SESSION['ADMIN_USERNAME'] = $email;
-        header('location:admin_dashboard.php?name='. $email. '');
+        header('location:admin_dashboard.php');
         die();
     }else{
         echo "Please enter valid login details";
