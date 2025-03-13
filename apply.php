@@ -4,7 +4,9 @@ require('config/config.php');
 require_once('templates/header.php');
 
 if(isset($_POST['proceed'])){
+    // user selected location
     $location = $_POST['location'];
+    // redirect to apply_form.php with location query string
     header('location:apply_form.php?location='.$location);
     die();
 }
@@ -19,7 +21,7 @@ if(isset($_POST['proceed'])){
         <div class="row">
             <?php 
             $locations = [
-                ["Two bedrooms 2 bath Apartment at 365 PLAZA at Mayera", "assets/img/1.jpg"],
+                ["Two bedrooms 2 bath Apartment at 365 PLAZA at Mayera", "assets/img/1.jpg"], //$location 
                 ["One Bedroom Self House at Okaiman-Mayera", "assets/img/2.jpg"],
                 ["Two bedrooms Two bath Apartment at 365 Residence-Mayera", "assets/img/3.jpg"],
                 ["Two bedrooms One bath Apartment at 365 Residence-Mayera", "assets/img/4.jpg"],

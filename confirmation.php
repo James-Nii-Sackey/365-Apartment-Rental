@@ -3,10 +3,16 @@ $title = 'Confirmation';
 require('config/config.php');
 require_once('templates/header.php');
 
+// get the application code from the query string
 $application_code = $_GET['application_code'];
+
+// check if the application code is set
 if(isset($application_code)){
+// select the application details from the database
     $sql = "SELECT * FROM applications WHERE applicationCode = '$application_code'";
+    // result query basically have 2 parameters, the connection and the sql query
     $result = mysqli_query($mysqli, $sql);
+    // fetch the result as an associative array
     $row = mysqli_fetch_assoc($result);
 
     $firstName = $row['firstName'];

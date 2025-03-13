@@ -1,8 +1,8 @@
 <?php 
 session_start();
  $title = 'Admin';
-    include('templates/header.php');
-    include('config/config.php');
+    include('../templates/header.php');
+    include('../config/config.php');
 
 if(isset($_POST['submit'])){
     $email = $_POST['email'];
@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
 <main class="form-signin w-25 m-auto card p-5">
   <form method="post" >
     <div class="d-flex justify-content-center">
-        <img class="mb-4" src="assets/img/fr.png"  alt="" width="82" height="67">
+        <img class="mb-4" src="../assets/img/fr.png"  alt="" width="82" height="67">
       
 
     </div>

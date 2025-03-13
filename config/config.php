@@ -8,6 +8,9 @@ $dbname = "365-apartment";
 $mysqli = mysqli_connect($host, "root", $password, $dbname);    
 
 
+
+
+// random number generator
 $code =  rand(100000, 999999) . rand(100000, 999999);
 
 ?>

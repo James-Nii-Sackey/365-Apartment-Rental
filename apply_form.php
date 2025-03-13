@@ -2,10 +2,11 @@
 $title = 'Application Form';
 require('config/config.php');
 require_once('templates/header.php');
-
+// get location from query string
 $location = $_GET['location'];
 
-if(isset($_POST['submit'])){
+
+if(isset($_POST['submit'])){  // check if form is submitted and actually clicked
     $location = $_POST['location'];
     $application_code = $_POST['applicationCode'];
     $rentDuration = $_POST['rentDuration'];
@@ -17,9 +18,13 @@ if(isset($_POST['submit'])){
     $emergencyContact = $_POST['emergencyContact'];
     $initalDeposit = $_POST['initalDeposit'];
 
+    // insert the user application details into the database
     $sql = "INSERT INTO applications (location,applicationCode, rentDuration, firstName, lastName, mobileNumber, email, emergencyName, emergencyContact, initalDeposit) VALUES ('$location', '$application_code ', '$rentDuration', '$firstName', '$lastName', '$mobileNumber', '$email', '$emergencyName', '$emergencyContact', '$initalDeposit')";
+    // result query basically have 2 parameters, the connection and the sql query
     $result = mysqli_query($mysqli, $sql);
+    // check if the query was successful
     if($result){
+        // redirect user to the confirmation page with the uniqye application code in thr query string
         header('location:confirmation.php?application_code='.$application_code.' ');
     }else{
         echo "<script>alert('Failed to submit application')</script>";
