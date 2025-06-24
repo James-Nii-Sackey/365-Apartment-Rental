@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
     
     // Validate credentials (in a real app, use password_hash() and password_verify())
-    if ($username === 'admin' && $password === 'password123') {
+    if ($username === 'admin' && $password === '123') {
         $_SESSION['admin_logged_in'] = true;
         header('Location: dashboard.php');
         exit();
