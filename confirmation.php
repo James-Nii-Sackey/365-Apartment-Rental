@@ -19,7 +19,7 @@ if(isset($application_code)){
     $lastName = $row['lastName'];
     $mobileNumber = $row['mobileNumber'];
     $email = $row['email'];
-    $rentPackage = $row['rentDuration'];
+    
     $emergencyName = $row['emergencyName'];
     $emergencyPhone = $row['emergencyContact'];
     $deposit = $row['initalDeposit'];
