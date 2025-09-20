@@ -1,17 +1,10 @@
 <?php
 // Load config & start session immediately
-<<<<<<< HEAD
 // Note: You must have a 'config/config.php' file that establishes a $mysqli connection.
  require('../config/config.php'); 
 session_start();
 
 
-=======
-
- require('../config/config.php'); 
-session_start();
-
->>>>>>> f8ed2da6280bd4110ab8b29c809eed5603599f7d
 // Page title
 $title = 'Manage Properties';
 
@@ -137,12 +130,7 @@ $properties = mysqli_fetch_all($result, MYSQLI_ASSOC);
   
   <div class="container-fluid">
     <div class="row">
-<<<<<<< HEAD
     <?php include('templates/sidebar.php'); // Include sidebar ?>
-=======
-      <!-- Sidebar -->
-   <?php include("templates/sidebar.php") ; ?>
->>>>>>> f8ed2da6280bd4110ab8b29c809eed5603599f7d
 
       <!-- Main Content -->
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
@@ -172,11 +160,7 @@ $properties = mysqli_fetch_all($result, MYSQLI_ASSOC);
                       <span class="badge badge-room me-1"><?= htmlspecialchars($p['prop_room_type']) ?></span>
                       <span class="badge badge-room"><?= $p['prop_bath'] ?> Bath</span>
                     </div>
-<<<<<<< HEAD
                     <h4 class="fw-bold mt-auto mb-0">GHC <?= number_format($p['prop_price'], 2) ?></h4>
-=======
-                    <h4 class="fw-bold mt-auto mb-0">$<?= number_format($p['prop_price'], 2) ?></h4>
->>>>>>> f8ed2da6280bd4110ab8b29c809eed5603599f7d
                   </div>
                   <div class="card-footer bg-transparent border-0 d-flex justify-content-end pb-3">
                     <button class="btn btn-sm btn-outline-secondary me-2" data-bs-toggle="modal" data-bs-target="#editPropertyModal<?= $p['id'] ?>">Edit</button>
