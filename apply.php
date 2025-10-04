@@ -38,7 +38,7 @@ $properties = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     <div class="col-md-6 mb-3">
                         <label class="d-flex align-items-center p-2 border rounded shadow-sm h-100">
                             <input type="radio" required name="location" value="'.$location_safe.'" class="me-2">
-                            <img src="admin/uploads/'.$image_safe.'" alt="'.$location_safe.'" class="img-thumbnail me-3" style="width: 100px; height: 100px; object-fit: cover;" onerror="this.onerror=null;this.src=\'https://placehold.co/100x100/ccc/fff?text=No+Image\';">
+                            <img src="admin/'.$image_safe.'" alt="'.$location_safe.'" class="img-thumbnail me-3" style="width: 100px; height: 100px; object-fit: cover;" onerror="this.onerror=null;this.src=\'https://placehold.co/100x100/ccc/fff?text=No+Image\';">
                             <span>'.$location_safe.'</span>
                         </label>
                     </div>';
